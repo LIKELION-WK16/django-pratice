@@ -19,3 +19,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/',include('todo.urls'))]
+
+from todo.views import index, todos
+
+urlpatterns = [
+    path('',todos),
+    path('index/',index)
+    ]
+
